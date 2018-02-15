@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/sudachen/pprof/profile"
-	"os"
 )
 
 const defaultSource = ""
@@ -128,8 +127,6 @@ func tuneBy(o *Options) []string {
 	} else {
 		c = append(c, "focus=")
 	}
-
-	fmt.Fprintln(os.Stderr,c)
 
 	return c
 }
