@@ -26,9 +26,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/google/pprof/internal/plugin"
-	"github.com/google/pprof/internal/report"
-	"github.com/google/pprof/third_party/svg"
+	"github.com/sudachen/pprof/internal/plugin"
+	"github.com/sudachen/pprof/internal/report"
+	"github.com/sudachen/pprof/third_party/svg"
 )
 
 // commands describes the commands accepted by pprof.

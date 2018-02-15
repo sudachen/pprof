@@ -27,10 +27,10 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/google/pprof/internal/graph"
-	"github.com/google/pprof/internal/measurement"
-	"github.com/google/pprof/internal/plugin"
-	"github.com/google/pprof/profile"
+	"github.com/sudachen/pprof/internal/graph"
+	"github.com/sudachen/pprof/internal/measurement"
+	"github.com/sudachen/pprof/internal/plugin"
+	"github.com/sudachen/pprof/profile"
 )
 
 // Output formats.

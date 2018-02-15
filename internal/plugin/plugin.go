@@ -21,7 +21,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/google/pprof/profile"
+	"github.com/sudachen/pprof/profile"
 )
 
 // Options groups all the optional plugins into pprof.
@@ -42,6 +42,7 @@ type Options struct {
 	// A common use for a custom HTTPServer is to provide custom
 	// authentication checks.
 	HTTPServer func(args *HTTPServerArgs) error
+	WantBrowser bool
 }
 
 // Writer provides a mechanism to write data under a certain name,

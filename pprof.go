@@ -1,31 +1,25 @@
-// Copyright 2014 Google Inc. All Rights Reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+// Copyright 2014 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
 
-// pprof is a tool for collection, manipulation and visualization
-// of performance profiles.
+// pprof is a tool for visualization of profile.data. It is based on
+// the upstream version at github.com/google/pprof, with minor
+// modifications specific to the Go distribution. Please consider
+// upstreaming any modifications to these packages.
+
 package main
 
 import (
 	"fmt"
 	"os"
 
-	"github.com/google/pprof/driver"
+	"github.com/sudachen/pprof/driver"
 )
 
 func main() {
-	if err := driver.PProf(&driver.Options{}); err != nil {
-		fmt.Fprintf(os.Stderr, "pprof: %v\n", err)
+	options := &driver.Options{WantBrowser:true}
+	if err := driver.PProf(options); err != nil {
+		fmt.Fprintf(os.Stderr, "%v\n", err)
 		os.Exit(2)
 	}
 }

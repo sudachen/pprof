@@ -15,9 +15,9 @@
 package driver
 
 import "html/template"
-import "github.com/google/pprof/third_party/d3"
-import "github.com/google/pprof/third_party/d3tip"
-import "github.com/google/pprof/third_party/d3flamegraph"
+import "github.com/sudachen/pprof/third_party/d3"
+import "github.com/sudachen/pprof/third_party/d3tip"
+import "github.com/sudachen/pprof/third_party/d3flamegraph"
 
 // addTemplates adds a set of template definitions to templates.
 func addTemplates(templates *template.Template) {
@@ -251,11 +251,13 @@ table tr td {
     </div>
     <div class="submenu">
       <a title="{{.Help.top}}"  href="/top" id="topbtn">Top</a>
-      <a title="{{.Help.graph}}" href="/" id="graphbtn">Graph</a>
+      <a title="{{.Help.graph}}" href="/dot" id="graphbtn">Graph</a>
       <a title="{{.Help.flamegraph}}" href="/flamegraph" id="flamegraph">Flame Graph</a>
       <a title="{{.Help.peek}}" href="/peek" id="peek">Peek</a>
       <a title="{{.Help.list}}" href="/source" id="list">Source</a>
       <a title="{{.Help.disasm}}" href="/disasm" id="disasm">Disassemble</a>
+      <a title="{{.Help.update}}" href="/" id="update">Update</a>
+      <a title="{{.Help.clear}}" href="/" id="clear">Clear</a>
     </div>
   </div>
 
@@ -837,7 +839,7 @@ function viewer(baseUrl, nodes) {
     toptable.addEventListener('touchstart', handleTopClick);
   }
 
-  const ids = ['topbtn', 'graphbtn', 'peek', 'list', 'disasm',
+  const ids = ['topbtn', 'graphbtn', 'peek', 'list', 'disasm', 'update', 'clear',
                'focus', 'ignore', 'hide', 'show'];
   ids.forEach(makeLinkDynamic);
 
@@ -1134,5 +1136,27 @@ function viewer(baseUrl, nodes) {
 </body>
 </html>
 {{end}}
+
+{{define "/" -}}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{.Title}}</title>
+  {{template "css" .}}
+</head>
+<body>
+  {{template "header" .}}
+  <div id="content">
+    <pre>
+      {{.TextBody}}
+    </pre>
+  </div>
+  {{template "script" .}}
+  <script>viewer({{.BaseURL}}, null);</script>
+</body>
+</html>
+{{end}}
+
 `))
 }
