@@ -20,24 +20,24 @@ automatically set in all console sessions.
 To get the source code, run
 
 ```
-go get github.com/google/pprof
+go get github.com/sudachen/pprof
 ```
 
 To run the tests, do
 
 ```
-cd $GOPATH/src/github.com/google/pprof
+cd $GOPATH/src/github.com/sudachen/pprof
 go test -v ./...
 ```
 
 When you wish to work with your own fork of the source (which is required to be
 able to create a pull request), you'll want to get your fork repo as another Git
-remote in the same `github.com/google/pprof` directory. Otherwise, if you'll `go
+remote in the same `github.com/sudachen/pprof` directory. Otherwise, if you'll `go
 get` your fork directly, you'll be getting errors like `use of internal package
 not allowed` when running tests.  To set up the remote do something like
 
 ```
-cd $GOPATH/src/github.com/google/pprof
+cd $GOPATH/src/github.com/sudachen/pprof
 git remote add aalexand git@github.com:aalexand/pprof.git
 git fetch aalexand
 git checkout -b my-new-feature

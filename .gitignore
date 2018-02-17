@@ -3,6 +3,7 @@
 *.orig
 *.exe
 .*.swp
+.idea
 core
 coverage.txt
 pprof
