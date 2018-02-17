@@ -21,10 +21,10 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/google/pprof/internal/binutils"
-	"github.com/google/pprof/internal/graph"
-	"github.com/google/pprof/internal/proftest"
-	"github.com/google/pprof/profile"
+	"github.com/sudachen/pprof/internal/binutils"
+	"github.com/sudachen/pprof/internal/graph"
+	"github.com/sudachen/pprof/internal/proftest"
+	"github.com/sudachen/pprof/profile"
 )
 
 type testcase struct {

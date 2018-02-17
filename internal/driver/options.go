@@ -22,9 +22,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/google/pprof/internal/binutils"
-	"github.com/google/pprof/internal/plugin"
-	"github.com/google/pprof/internal/symbolizer"
+	"github.com/sudachen/pprof/internal/binutils"
+	"github.com/sudachen/pprof/internal/plugin"
+	"github.com/sudachen/pprof/internal/symbolizer"
 )
 
 // setDefaults returns a new plugin.Options with zero fields sets to

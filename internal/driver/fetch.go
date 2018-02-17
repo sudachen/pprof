@@ -31,9 +31,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/google/pprof/internal/measurement"
-	"github.com/google/pprof/internal/plugin"
-	"github.com/google/pprof/profile"
+	"github.com/sudachen/pprof/internal/measurement"
+	"github.com/sudachen/pprof/internal/plugin"
+	"github.com/sudachen/pprof/profile"
 )
 
 // fetchProfiles fetches and symbolizes the profiles specified by s.

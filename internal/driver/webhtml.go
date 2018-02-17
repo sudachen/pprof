@@ -15,9 +15,9 @@
 package driver
 
 import "html/template"
-import "github.com/google/pprof/third_party/d3"
-import "github.com/google/pprof/third_party/d3tip"
-import "github.com/google/pprof/third_party/d3flamegraph"
+import "github.com/sudachen/pprof/third_party/d3"
+import "github.com/sudachen/pprof/third_party/d3tip"
+import "github.com/sudachen/pprof/third_party/d3flamegraph"
 
 // addTemplates adds a set of template definitions to templates.
 func addTemplates(templates *template.Template) {

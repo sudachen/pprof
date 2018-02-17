@@ -25,9 +25,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/google/pprof/internal/plugin"
-	"github.com/google/pprof/internal/report"
-	"github.com/google/pprof/profile"
+	"github.com/sudachen/pprof/internal/plugin"
+	"github.com/sudachen/pprof/internal/report"
+	"github.com/sudachen/pprof/profile"
 )
 
 // PProf acquires a profile, and symbolizes it using a profile

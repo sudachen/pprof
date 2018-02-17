@@ -24,7 +24,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/google/pprof/internal/plugin"
+	"github.com/sudachen/pprof/internal/plugin"
 )
 
 var testAddrMap = map[int]string{

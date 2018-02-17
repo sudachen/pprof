@@ -26,8 +26,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/google/pprof/internal/plugin"
-	"github.com/google/pprof/profile"
+	"github.com/sudachen/pprof/internal/plugin"
+	"github.com/sudachen/pprof/profile"
 	"runtime"
 )
 
